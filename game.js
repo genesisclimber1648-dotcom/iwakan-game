@@ -1,31 +1,31 @@
 (() => {
   'use strict';
 
-  const STORAGE_KEY = 'iwakan_custom_targets_v20';
+  const STORAGE_KEY = 'iwakan_custom_targets_v21_baked';
   const EDIT_STEP = 0.005;
   const MIN_SIZE = 0.01;
 
   const defaultStages = [
-    { src: 'assets/scene1.png', target: { x: 0.560, y: 0.740, w: 0.130, h: 0.080 } },
-    { src: 'assets/scene2.png', target: { x: 0.035, y: 0.505, w: 0.400, h: 0.105 } },
-    { src: 'assets/scene3.png', target: { x: 0.470, y: 0.600, w: 0.510, h: 0.240 } },
-    { src: 'assets/scene4.png', target: { x: 0.670, y: 0.030, w: 0.310, h: 0.150 } },
-    { src: 'assets/scene5.png', target: { x: 0.780, y: 0.740, w: 0.210, h: 0.130 } },
+    { src: 'assets/scene1.png', target: { x: 0.434, y: 0.804, w: 0.240, h: 0.173 } },
+    { src: 'assets/scene2.png', target: { x: 0.029, y: 0.553, w: 0.285, h: 0.129 } },
+    { src: 'assets/scene3.png', target: { x: 0.463, y: 0.755, w: 0.337, h: 0.242 } },
+    { src: 'assets/scene4.png', target: { x: 0.600, y: 0.015, w: 0.398, h: 0.236 } },
+    { src: 'assets/scene5.png', target: { x: 0.775, y: 0.840, w: 0.125, h: 0.130 } },
     { src: 'assets/scene6.png', target: { x: 0.730, y: 0.720, w: 0.250, h: 0.150 } },
-    { src: 'assets/scene7.png', target: { x: 0.700, y: 0.180, w: 0.290, h: 0.240 } },
-    { src: 'assets/scene8.png', target: { x: 0.810, y: 0.340, w: 0.170, h: 0.140 } },
-    { src: 'assets/scene9.png', target: { x: 0.790, y: 0.090, w: 0.160, h: 0.140 } },
-    { src: 'assets/scene10.png', target: { x: 0.770, y: 0.300, w: 0.200, h: 0.260 } },
-    { src: 'assets/scene11.png', target: { x: 0.230, y: 0.260, w: 0.550, h: 0.470 } },
-    { src: 'assets/scene12.png', target: { x: 0.000, y: 0.020, w: 0.150, h: 0.170 } },
-    { src: 'assets/scene13.png', target: { x: 0.700, y: 0.290, w: 0.110, h: 0.170 } },
-    { src: 'assets/scene14.png', target: { x: 0.000, y: 0.790, w: 0.150, h: 0.210 } },
+    { src: 'assets/scene7.png', target: { x: 0.675, y: 0.308, w: 0.070, h: 0.103 } },
+    { src: 'assets/scene8.png', target: { x: 0.764, y: 0.332, w: 0.147, h: 0.120 } },
+    { src: 'assets/scene9.png', target: { x: 0.733, y: 0.096, w: 0.116, h: 0.153 } },
+    { src: 'assets/scene10.png', target: { x: 0.758, y: 0.208, w: 0.166, h: 0.528 } },
+    { src: 'assets/scene11.png', target: { x: 0.791, y: 0.804, w: 0.152, h: 0.085 } },
+    { src: 'assets/scene12.png', target: { x: 0.102, y: 0.095, w: 0.088, h: 0.343 } },
+    { src: 'assets/scene13.png', target: { x: 0.774, y: 0.205, w: 0.087, h: 0.110 } },
+    { src: 'assets/scene14.png', target: { x: 0.000, y: 0.782, w: 0.240, h: 0.217 } },
     { src: 'assets/scene15.png', target: { x: 0.740, y: 0.120, w: 0.210, h: 0.560 } },
-    { src: 'assets/scene16.png', target: { x: 0.350, y: 0.220, w: 0.240, h: 0.100 } },
-    { src: 'assets/scene17.png', target: { x: 0.435, y: 0.390, w: 0.155, h: 0.120 } },
-    { src: 'assets/scene18.png', target: { x: 0.650, y: 0.280, w: 0.260, h: 0.180 } },
-    { src: 'assets/scene19.png', target: { x: 0.455, y: 0.090, w: 0.155, h: 0.095 } },
-    { src: 'assets/scene20.png', target: { x: 0.000, y: 0.040, w: 0.160, h: 0.140 } }
+    { src: 'assets/scene16.png', target: { x: 0.023, y: 0.777, w: 0.124, h: 0.143 } },
+    { src: 'assets/scene17.png', target: { x: 0.432, y: 0.579, w: 0.141, h: 0.084 } },
+    { src: 'assets/scene18.png', target: { x: 0.628, y: 0.411, w: 0.324, h: 0.389 } },
+    { src: 'assets/scene19.png', target: { x: 0.361, y: 0.147, w: 0.087, h: 0.084 } },
+    { src: 'assets/scene20.png', target: { x: 0.075, y: 0.124, w: 0.090, h: 0.106 } }
   ];
 
   const deepClone = (value) => JSON.parse(JSON.stringify(value));
